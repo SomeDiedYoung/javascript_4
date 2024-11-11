@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <!-- <table class="table"></table> -->
+
+    <!-- <form>
+        <label for="columns">How many Columns :</label><br>
+        <input type="number" id="numCol" name="numCol"><br>
+
+        
+        <label for="rows">How many Rows:</label><br>
+        <input type="number" id="numRow" name="numCol"><br>
+
+        <label for="photo">How many photos:</label><br>
+        <input type="number" id="inputPhotos" name="inputPhotos"><br> <br>
+
+        <button id="btn" onclick="UniqueFunctionDoingEveryThing()" type="button">Submit</button>
+
+      </form> -->
+
+
+      <!-- <style>.btn{padding: 10px 15px;margin-top: 10px;}</style>
+      <label for="input">Kviris Dge Aris :</label>
+      <input type="text" id="inputDay" readonly><br>
+
+      <button class="btn" onclick="valueToOutput(1)">1</button>
+      <button class="btn" onclick="valueToOutput(2)">2</button>
+      <button class="btn" onclick="valueToOutput(3)">3</button>
+      <button class="btn" onclick="valueToOutput(4)">4</button>
+      <button class="btn" onclick="valueToOutput(5)">5</button>
+      <button class="btn" onclick="valueToOutput(6)">6</button>
+      <button class="btn" onclick="valueToOutput(7)">7</button> -->
+
+
+
+
+   <!-- <div id="containerForNums"></div>
+    <button id="task5" onclick="appendInDiv()">Tap Here</button> -->
+
+<!-- 
+  <form>
+        <label for="columns">From a :</label><br>
+        <input type="number" id="a" name="a" min="1" required><br>
+
+        
+        <label for="rows">To b:</label><br>
+        <input type="number" id="b" name="b" min="1"><br><br>
+
+        <button id="btn" onclick="rangedDiv()" type="button">Submit</button><br>
+
+      </form>
+      <br>
+      <div id="containerForRangedItems"></div> -->
+
+
+<!-- 
+
+<form>
+    <label for="text">Ramdeni sveti:</label>
+    <input type="number" id="sveti" min="1"><br><br>
+    <label for="text">Ramdeni striqoni:</label>
+    <input type="number" id="striqoni" min="1"><br><br>
+    <label for="text">Ramdeni foto:</label>
+    <input type="number" id="foto" min="1"><br><br>
+    <button id="send" onclick="yvelaferi()">Generate Table</button>
+</form> -->
+
+
+
+<!-- <div id="ragaca" style="display: none;">
+    <ol>
+        <li>gweag</li>
+        <li>rhqh</li>
+        <li>hw5h`</li>
+        <li>hrhaa</li>
+    </ol>
+</div> -->
+<!--  -->
+<!-- <table class="table"></table> -->
+
+
+
+<!-- // დავალება №3 (4 ქულა)
+// დაწეროთ ფუნქცია, რომელიც გამოიტანს NxM-ზე რაოდენობის div თაგს N სტრიქონში და M სვეტში (N და M
+// აუცილებლად აკმაყოფილებს შემდეგ პირობებს , N და M მნიშვნელობები შეიტანეთ დიალოგური ფანჯრიდან).
+// გამოტანილი დივებიდან შემთხვევითად შეარჩიეთ რომელიმე 5 დივი და ჩასვით ასევე შემთხვევითი 200x200 ზე
+// ფოტო წინასწარ აღებული 7 ფოტოდან. -->
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კალენდარი</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>კალენდარი</h1>
+    <label for="year">წელი:</label>
+    <input type="number" id="year" value="2024">
+    <label for="month">თვე:</label>
+    <input type="number" id="month" value="11" min="1" max="12">
+    <button onclick="generateCalendar()">კალენდრის შექმნა</button>
+
+    <div id="calendar"></div>
+
+    <script src="calendar.js"></script>
+</body>
+</html>
+
+<script>
+    function Davaleba3(){
+    const Container = document.getElementById("container");
+    Container.innerHTML= ''
+    Container.style.display= "flex";
+
+const N = parseInt(prompt("SheiyvaneT Striqonebis raodenoba"))
+const M = parseInt(prompt("SheiyvaneT Svetebis raodenoba"))
+
+if(isNaN(N) || N=="" || M == null || M =="" ){
+    document.write("Invalid Input")
+    return 0;
+}
+
+    for(let i=0;i<N;i++){
+        const Striqonebi = document.createElement("div")
+        for(let j=0;j<M;j++){
+            const Svetebi = document.createElement("div")
+            Svetebi.style.width="100px";
+            Svetebi.style.border="1px solid black"
+
+            Striqonebi.appendChild(Svetebi);
+        }
+        Container.appendChild(Striqonebi)
+    }
+    document.body.appendChild(Container)
+
+
+}
+// Davaleba3()
+
+</script>
+
+
+
+
+
+
+    <!-- <script src="1_1.js"></script> -->
+    <!-- <script src="1_2.js"></script> -->
+    <!-- <script src="6_1.js"></script> -->
+<!--  
+    <!DOCTYPE html>
+    <html lang="ka">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>კალენდარი</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid black;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>კალენდარი</h1>
+        <label for="year">წელი:</label>
+        <input type="number" id="year" value="2024">
+        <label for="month">თვე:</label>
+        <input type="number" id="month" value="11" min="1" max="12">
+        <button onclick="generateCalendar()">კალენდრის შექმნა</button>
+    
+        <div id="calendar"></div>
+     -->
+
+      <script src="k.js"></script>
+</body>
+</html>

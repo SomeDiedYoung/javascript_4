@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="controler result">
+        <input type="number"  name="index" id="input">
+        <button onclick="ragac()"> clicke</button>
+
+    </div>
+
+    <div class="result">
+        <p>1.1</p>
+        <p>1.2</p>
+        <p>1.3</p>
+    </div>
+    <div class="result">
+        <p>2.1</p>
+        <p>2.2</p>
+        <p>2.3</p>
+    </div>
+    <div class="result">
+        <p>3.1</p>
+        <p>3.2</p>
+        <p>3.3</p>
+    </div>
+
+
+    <script>
+        function change_color_d_1(){
+            const div = document.getElementsByClassName("controler")[0]
+            const color = getren()
+            
+                if (div.style.backgroundColor === '') {
+                    div.style.backgroundColor = color;
+                } else {
+                    div.style.backgroundColor = '';
+                }
+            }
+        
+
+        function getren(){
+            const r = Math.floor(Math.random() * 255)
+            const g = Math.floor(Math.random() * 255)
+            const b = Math.floor(Math.random() * 255)
+             const color = `rgb(${r},${g}, ${b} )`
+             return color
+
+        }
+
+        function ragac(){
+            const divebi = document.getElementsByClassName("result")
+            const value = document.getElementById('input').value
+            for(let i= 0 ; i< divebi.length  && i< value ; i++){
+                const color = getren()  
+                divebi[i].style.backgroundColor = color
+            }
+
+            }
+    </script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>დღეების გამოთვლა</title>
+</head>
+<body>
+    <h1>გამოთვალეთ დღეები</h1>
+    <input type="date" id="userDate" />
+    <button onclick="calculateDays()">გამოთვალე</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateDays() {
+            // მომხმარებლის მიერ შეტანილი თარიღი
+            const userInputDate = document.getElementById("userDate").value;
+            console.log(userInputDate)
+
+            // თუ თარიღი არ არის შეტანილი, ასახეთ შეცდომა
+            if (!userInputDate) {
+                document.getElementById("result").innerText = "გთხოვთ შეიტანოთ თარიღი.";
+                return;
+            }
+
+            // შექმენით თარიღი მომხმარებლის მიერ შეტანილი თარიღის მიხედვით
+            const userDate = new Date(userInputDate);
+
+            // მიმდინარე წლის დასაწყისი (1 იანვარი)
+            const startOfYear = new Date(userDate.getFullYear(), 0, 1);
+
+            // გამოთვალეთ განსხვავება დღეებში
+            const timeDifference = userDate - startOfYear;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            // გამოიტანეთ შედეგი
+            document.getElementById("result").innerText = `დღეების რაოდენობა: ${daysDifference} დღე(ი)`;
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ragac(){
+            let divresult = ''
+            for(let i= 0; i<5; i++){
+                divresult+='<div>'
+                for(let j=0; j<3; j++){
+                    divresult+='<p>'
+                        divresult+=`${i}; ${j}`
+                    divresult+='</p>'
+
+                }
+                divresult+='</div>'
+            }
+            document.body.innerHTML=divresult
+        }
+        ragac()
+    </script>
+</body>
+</html> -->
+
+\<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კალენდარი</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>კალენდარი</h1>
+    <label for="year">წელი:</label>
+    <input type="number" id="year" value="2024">
+    <label for="month">თვე:</label>
+    <input type="number" id="month" value="11" min="1" max="12">
+    <button onclick="generateCalendar()">კალენდრის შექმნა</button>
+
+    <div id="calendar"></div>
+
+    <script src="calendar.js"></script>
+</body>
+</html>
